@@ -6,8 +6,8 @@ Subject: Don't require libdb
  Uploaders: Sam Hartman <hartmans@debian.org>
  Maintainer: Steve Langasek <vorlon@debian.org>
  Standards-Version: 4.6.0
--Build-Depends: debhelper-compat (= 13), quilt, flex, libdb-dev, libselinux1-dev [linux-any], po-debconf, dh-autoreconf, autopoint, libaudit-dev [linux-any] <!stage1>, pkg-config, libfl-dev, libfl-dev:native, docbook-xsl, docbook-xml, xsltproc, libxml2-utils, w3m
-+Build-Depends: debhelper-compat (= 13), quilt, flex, libselinux1-dev [linux-any], po-debconf, dh-autoreconf, autopoint, libaudit-dev [linux-any] <!stage1>, pkg-config, libfl-dev, libfl-dev:native, docbook-xsl, docbook-xml, xsltproc, libxml2-utils, w3m
+-Build-Depends: debhelper-compat (= 13), dh-exec, quilt, flex, libdb-dev, libselinux1-dev [linux-any], po-debconf, dh-autoreconf, autopoint, libaudit-dev [linux-any] <!stage1>, pkg-config, libfl-dev, libfl-dev:native, docbook-xsl, docbook-xml, xsltproc, libxml2-utils, w3m
++Build-Depends: debhelper-compat (= 13), dh-exec, quilt, flex, libselinux1-dev [linux-any], po-debconf, dh-autoreconf, autopoint, libaudit-dev [linux-any] <!stage1>, pkg-config, libfl-dev, libfl-dev:native, docbook-xsl, docbook-xml, xsltproc, libxml2-utils, w3m
  Build-Conflicts-Indep: fop
 -Build-Conflicts: libdb4.2-dev, libxcrypt-dev
 +Build-Conflicts: libxcrypt-dev
@@ -16,11 +16,11 @@ Subject: Don't require libdb
  Homepage: http://www.linux-pam.org/
 --- pam-1.5.2.orig/debian/rules	2022-08-24 09:37:06.195263496 +0000
 +++ pam-1.5.2/debian/rules	2022-08-24 09:41:55.703590089 +0000
-@@ -30,6 +30,7 @@ override_dh_auto_configure:
- 	dh_auto_configure -- --enable-static --enable-shared \
- 		--libdir=/lib/$(DEB_HOST_MULTIARCH) \
+@@ -32,6 +32,7 @@ override_dh_auto_configure:
  		--enable-isadir=/lib/security \
-+		--enable-db=no \
  		--with-systemdunitdir=/usr/lib/systemd/system \
  		--disable-nis \
++		--disable-db \
  		$(CONFIGURE_OPTS)
+ 
+ # .install files don't have "except for" handling, so we need to exclude
