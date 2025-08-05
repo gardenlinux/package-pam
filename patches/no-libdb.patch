@@ -1,12 +1,11 @@
-diff --color -Nuar a/debian/control b/debian/control
---- a/debian/control	2025-01-30 02:58:07.000000000 +0100
-+++ b/debian/control	2025-02-05 11:23:28.503204141 +0100
+--- a/debian/control	2025-06-29 17:40:46.000000000 +0000
++++ c/debian/control	2025-08-05 12:37:45.324014280 +0000
 @@ -3,9 +3,9 @@
  Priority: optional
  Maintainer: Sam Hartman <hartmans@debian.org>
- Standards-Version: 4.6.2
+ Standards-Version: 4.7.0
 -Build-Depends: debhelper-compat (= 13), dh-exec,  flex,  libcrypt-dev, libdb-dev, libselinux1-dev [linux-any], libsystemd-dev [linux-any] <!stage1>, po-debconf, meson, libaudit-dev [linux-any] <!stage1>, pkgconf, libfl-dev, libfl-dev:native
-+Build-Depends: debhelper-compat (= 13), dh-exec,  flex,  libcrypt-dev, libgdbm-dev, libselinux1-dev [linux-any], libsystemd-dev [linux-any] <!stage1>, po-debconf, meson, libaudit-dev [linux-any] <!stage1>, pkgconf, libfl-dev, libfl-dev:native
++Build-Depends: debhelper-compat (= 13), dh-exec,  flex,  libcrypt-dev, libselinux1-dev [linux-any], libsystemd-dev [linux-any] <!stage1>, po-debconf, meson, libaudit-dev [linux-any] <!stage1>, pkgconf, libfl-dev, libfl-dev:native
  Build-Depends-Indep: docbook-xsl-ns, docbook5-xml, xsltproc, libxml2-utils, w3m, fop
 -Build-Conflicts: libdb4.2-dev, libxcrypt-dev
 +Build-Conflicts: libxcrypt-dev
