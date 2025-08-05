@@ -1,5 +1,5 @@
---- control.orig	2025-08-05 13:06:21.182051402 +0200
-+++ control	2025-08-05 13:06:59.228723661 +0200
+--- a/debian/control	2025-08-05 13:06:21.182051402 +0200
++++ b/debian/control	2025-08-05 13:06:59.228723661 +0200
 @@ -3,9 +3,9 @@
  Priority: optional
  Maintainer: Sam Hartman <hartmans@debian.org>
@@ -12,8 +12,8 @@
  Vcs-Browser: https://salsa.debian.org/vorlon/pam
  Vcs-Git: https://salsa.debian.org/vorlon/pam.git
  Homepage: http://www.linux-pam.org/
---- rules.orig	2025-08-05 13:10:18.069010551 +0200
-+++ rules	2025-08-05 13:10:37.092846658 +0200
+--- a/debian/rules	2025-08-05 13:10:18.069010551 +0200
++++ b/debian/rules	2025-08-05 13:10:37.092846658 +0200
 @@ -43,6 +43,7 @@
  		-Disadir=/usr/lib/security \
  		-Dsystemdunitdir=/usr/lib/systemd/system \
